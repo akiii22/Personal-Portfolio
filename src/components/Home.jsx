@@ -15,11 +15,21 @@ const Home = () => {
         </div>
       </div>
       <div className="flex-shrink-0">
-        <img
-          src="/profile.png"
-          alt="profile"
-          className="w-40 h-40 md:w-56 md:h-56 rounded-full shadow-xl ring-4 ring-neutral/30"
-        />
+        <div className="relative w-40 h-40 md:w-56 md:h-56 group rounded-full overflow-hidden shadow-xl ring-4 ring-neutral/30 cursor-pointer">
+          <video
+            src="/video.mp4"
+            className="w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+          <img
+            src="/profile.png"
+            alt="profile"
+            className="absolute top-0 left-0 w-full h-full object-cover rounded-full transition-opacity duration-500 group-hover:opacity-0"
+          />
+        </div>
       </div>
     </div>
   );
