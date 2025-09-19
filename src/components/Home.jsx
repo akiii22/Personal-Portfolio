@@ -10,7 +10,9 @@ const Home = () => {
           Developer
         </p>
         <div className=" my-7 flex gap-3">
-          <button className="btn btn-success text-[16px]">View my Work</button>
+          <button className="btn btn-neutral text-[16px] capitalize">
+            View my Work
+          </button>
           <button className="btn btn-neutral text-[16px]">Contact me</button>
         </div>
       </div>
