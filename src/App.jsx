@@ -1,5 +1,6 @@
 import About from "./components/About";
 import Home from "./components/Home";
+import Projects from "./components/Projects";
 
 const App = () => {
   return (
@@ -10,6 +11,9 @@ const App = () => {
         </section>
         <section id="about" className="py-8">
           <About />
+        </section>
+        <section id="projects" className="py-8">
+          <Projects />
         </section>
       </div>
     </div>
