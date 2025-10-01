@@ -58,17 +58,14 @@ const Projects = () => {
               key={index}
               className="group relative h-96 w-full overflow-hidden rounded-xl shadow-2xl"
             >
-              {/* Background image */}
               <img
                 src={project.image}
                 alt={project.title}
                 className="object-cover w-full h-full transform transition duration-500 group-hover:scale-110"
               />
 
-              {/* Dark overlay */}
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-500"></div>
 
-              {/* Centered content (title + description) */}
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 opacity-0 group-hover:opacity-100 transition duration-500">
                 <h3 className="text-2xl font-bold text-white">
                   {project.title}
@@ -78,9 +75,7 @@ const Projects = () => {
                 </p>
               </div>
 
-              {/* Bottom tech + icons (always visible or only on hover) */}
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-                {/* Tech stack */}
                 <div className="flex gap-3">
                   {project.tech.map((t, i) => (
                     <div
@@ -93,7 +88,6 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* Links (fade in on hover) */}
                 <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition">
                   <a
                     href={project.github}

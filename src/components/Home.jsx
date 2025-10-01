@@ -1,3 +1,5 @@
+import { Moon, Sun } from "lucide-react";
+
 const Home = () => {
   return (
     <div className="flex flex-col-reverse items-center justify-center lg:flex-row lg:items-start lg:text-left gap-[3rem]">
@@ -14,6 +16,13 @@ const Home = () => {
             View my Work
           </button>
           <button className="btn btn-neutral text-[16px]">Contact me</button>
+          <label className="swap swap-rotate btn btn-neutral ">
+            <input type="checkbox" />
+
+            <Sun className="swap-on  w-8 h-8" />
+
+            <Moon className="swap-off w-8 h-8" />
+          </label>
         </div>
       </div>
       <div className="flex-shrink-0">
