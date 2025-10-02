@@ -1,13 +1,36 @@
 import { Moon, Sun } from "lucide-react";
+import { useEffect, useState } from "react";
+useEffect;
+const themes = {
+  lofi: "lofi",
+  night: "night",
+};
+
+const getLocalStorageTheme = () => {
+  return localStorage.getItem("theme");
+};
 
 const Home = () => {
+  const [theme, setTheme] = useState(getLocalStorageTheme);
+
+  const handleTheme = () => {
+    const { lofi, night } = themes;
+    const newTheme = theme === lofi ? night : lofi;
+    document.documentElement.setAttribute("data-theme", theme);
+    setTheme(newTheme);
+  };
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
   return (
     <div className="flex flex-col-reverse items-center justify-center lg:flex-row lg:items-start lg:text-left gap-[3rem]">
       <div className="p-4 max-w-xl">
-        <h1 className=" text-neutral-800 font-bold text-3xl  md:text-4xl lg:text-5xl mb-4 tracking-wide">
+        <h1 className=" text-base-content font-bold text-3xl  md:text-4xl lg:text-5xl mb-4 tracking-wide">
           Jerome R. Bulosan
         </h1>
-        <p className="mb-6 text-neutral-600 text-lg md:text-xl tracking-wide">
+        <p className="mb-6 text-base-content text-lg md:text-xl tracking-wide">
           Aspiring Developer <span className="text-success">|</span> Web
           Developer
         </p>
@@ -17,7 +40,7 @@ const Home = () => {
           </button>
           <button className="btn btn-neutral text-[16px]">Contact me</button>
           <label className="swap swap-rotate btn btn-neutral ">
-            <input type="checkbox" />
+            <input type="checkbox" onChange={handleTheme} />
 
             <Sun className="swap-on  w-8 h-8" />
 

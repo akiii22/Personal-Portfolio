@@ -48,7 +48,7 @@ const Projects = () => {
   return (
     <div className="w-full flex justify-center py-8">
       <div className="max-w-6xl w-full px-4">
-        <h2 className="text-4xl font-bold text-neutral-800 tracking-wide mb-10">
+        <h2 className="text-4xl font-bold text-base-content tracking-wide mb-10">
           Featured Projects
         </h2>
 
