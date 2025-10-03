@@ -1,4 +1,4 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: lofi --default, night;
+  themes: lofi --default, coffee;
 }

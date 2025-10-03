@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 useEffect;
 const themes = {
   lofi: "lofi",
-  night: "night",
+  coffee: "coffee",
 };
 
 const getLocalStorageTheme = () => {
@@ -14,8 +14,8 @@ const Home = () => {
   const [theme, setTheme] = useState(getLocalStorageTheme);
 
   const handleTheme = () => {
-    const { lofi, night } = themes;
-    const newTheme = theme === lofi ? night : lofi;
+    const { lofi, coffee } = themes;
+    const newTheme = theme === lofi ? coffee : lofi;
     document.documentElement.setAttribute("data-theme", theme);
     setTheme(newTheme);
   };
@@ -39,12 +39,12 @@ const Home = () => {
             View my Work
           </button>
           <button className="btn btn-neutral text-[16px]">Contact me</button>
-          <label className="swap swap-rotate btn btn-neutral ">
+          <label className="swap swap-rotate btn btn-neutral">
             <input type="checkbox" onChange={handleTheme} />
 
-            <Sun className="swap-on  w-8 h-8" />
+            <Sun className="swap-on  w-8 h-8 transition-all duration-150 ease-in-out" />
 
-            <Moon className="swap-off w-8 h-8" />
+            <Moon className="swap-off w-8 h-8 transition-all duration-150 ease-in-out" />
           </label>
         </div>
       </div>
