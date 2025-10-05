@@ -4,15 +4,15 @@ import Projects from "./components/Projects";
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-base-200 text-base-content flex justify-center my-10">
-      <div className="w-full max-w-4xl px-4 md:px-8">
-        <section id="header" className="py-16">
+    <div className="min-h-screen bg-base-100 text-base-content flex justify-center py-12">
+      <div className="w-full max-w-4xl px-4 md:px-8 space-y-20">
+        <section id="header">
           <Home />
         </section>
-        <section id="about" className="py-8">
+        <section id="about">
           <About />
         </section>
-        <section id="projects" className="py-8">
+        <section id="projects">
           <Projects />
         </section>
       </div>

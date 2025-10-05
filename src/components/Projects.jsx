@@ -46,70 +46,58 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="w-full flex justify-center py-8">
-      <div className="max-w-6xl w-full px-4">
-        <h2 className="text-4xl font-bold text-base-content tracking-wide mb-10">
-          Featured Projects
-        </h2>
+    <div className="max-w-5xl mx-auto space-y-10">
+      <h2 className="text-3xl font-bold text-center">Featured Projects</h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="group relative h-96 w-full overflow-hidden rounded-xl shadow-2xl"
-            >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="object-cover w-full h-full transform transition duration-500 group-hover:scale-110"
-              />
+      <div className="grid md:grid-cols-2 gap-6">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="border border-base-300 rounded-lg overflow-hidden"
+          >
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-48 object-cover"
+            />
 
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+            <div className="p-4 space-y-2">
+              <h3 className="text-xl font-semibold">{project.title}</h3>
+              <p className="text-sm text-base-content/70">
+                {project.description}
+              </p>
 
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 opacity-0 group-hover:opacity-100 transition duration-500">
-                <h3 className="text-2xl font-bold text-white">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-gray-200 mt-2">
-                  {project.description}
-                </p>
+              <div className="flex gap-3 mt-3">
+                {project.tech.map((t, i) => (
+                  <span
+                    key={i}
+                    className="tooltip tooltip-top"
+                    data-tip={t.name}
+                  >
+                    {t.icon}
+                  </span>
+                ))}
               </div>
 
-              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-                <div className="flex gap-3">
-                  {project.tech.map((t, i) => (
-                    <div
-                      key={i}
-                      className="tooltip tooltip-top"
-                      data-tip={t.name}
-                    >
-                      {t.icon}
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-circle btn-sm"
-                  >
-                    <Github size={18} />
-                  </a>
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-circle btn-sm"
-                  >
-                    <ExternalLink size={18} />
-                  </a>
-                </div>
+              <div className="flex gap-3 mt-4">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  className="btn btn-outline btn-xs"
+                >
+                  <Github size={14} />
+                </a>
+                <a
+                  href={project.live}
+                  target="_blank"
+                  className="btn btn-outline btn-xs"
+                >
+                  <ExternalLink size={14} />
+                </a>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );
