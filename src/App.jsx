@@ -1,6 +1,7 @@
 import About from "./components/About";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 
 const App = () => {
   return (
@@ -14,6 +15,9 @@ const App = () => {
         </section>
         <section id="projects">
           <Projects />
+        </section>
+        <section id="skills">
+          <Skills />
         </section>
       </div>
     </div>

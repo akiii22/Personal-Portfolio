@@ -2,3 +2,17 @@
 @plugin "daisyui" {
   themes: fantasy --default, coffee;
 }
+
+@keyframes movingskills {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-movingskills {
+  display: flex;
+  animation: movingskills 15s linear infinite;
+}
