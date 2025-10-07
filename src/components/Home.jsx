@@ -25,7 +25,7 @@ const Home = () => {
     localStorage.setItem("theme", theme);
   }, [theme]);
   return (
-    <div className="flex flex-col-reverse lg:flex-row items-center gap-16">
+    <div className="flex flex-col-reverse lg:flex-row items-center justify-evenly">
       <div className="max-w-xl space-y-6 text-center lg:text-left">
         <h1 className="font-bold text-4xl md:text-5xl">Jerome R. Bulosan</h1>
         <p className="text-lg">
@@ -45,7 +45,10 @@ const Home = () => {
       </div>
 
       <div className="flex-shrink-0 cursor-pointer">
-        <div className="relative w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden border border-base-300 group">
+        <div
+          className={`relative w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden border group
+    ${theme === "coffee" ? "border-base-content" : "border-base-300"}`}
+        >
           <img
             src="/profile.png"
             alt="profile"
