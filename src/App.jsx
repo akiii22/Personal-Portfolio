@@ -3,6 +3,7 @@ import Experience from "./components/Experience";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import TimelineProject from "./components/TimelineProject";
 
 const App = () => {
   return (
@@ -22,6 +23,9 @@ const App = () => {
         </section>
         <section id="experience">
           <Experience />
+        </section>
+        <section id="timeline">
+          <TimelineProject />
         </section>
       </div>
     </div>
