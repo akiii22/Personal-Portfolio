@@ -1,3 +1,4 @@
+import Contact from "./components/Contact";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Home from "./components/Home";
@@ -26,6 +27,9 @@ const App = () => {
         </section>
         <section id="timeline">
           <TimelineProject />
+        </section>
+        <section id="contact">
+          <Contact />
         </section>
       </div>
     </div>

@@ -1,6 +1,10 @@
+import CallingCard from "./Callingcard";
+
 const Contact = () => {
   return (
-    <div>Contact</div>
-  )
-}
-export default Contact
+    <div>
+      <CallingCard />
+    </div>
+  );
+};
+export default Contact;
