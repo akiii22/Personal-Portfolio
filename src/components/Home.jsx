@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 useEffect;
 const themes = {
   fantasy: "fantasy",
-  coffee: "dracula",
+  dracula: "dracula",
 };
 
 const getLocalStorageTheme = () => {
