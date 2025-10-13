@@ -13,7 +13,7 @@ const TimelineProject = () => {
           return (
             <div
               key={index}
-              className={`md:items-center md:flex mb-10 ${
+              className={`md:items-center md:flex mb-10 md:w-full ${
                 index % 2 !== 0 ? "md:flex-row-reverse" : ""
               }`}
             >
@@ -41,7 +41,7 @@ const TimelineProject = () => {
                   </a>
                 </div>
               </div>
-              <div className="md:w-full md:mt-2 mt-6 cursor-pointer hover:scale-110 hover:shadow-xl transition duration-300">
+              <div className="md:w-1/2 md:mt-2 mt-6 cursor-pointer hover:scale-110 hover:shadow-xl transition duration-300">
                 <img
                   src={project.img}
                   alt={project.year}
