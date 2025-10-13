@@ -14,7 +14,7 @@ const Home = () => {
   const [theme, setTheme] = useState(getLocalStorageTheme);
 
   const handleTheme = () => {
-    const { fantasy, coffee } = themes;
+    const { fantasy, dracula } = themes;
     const newTheme = theme === fantasy ? dracula : fantasy;
     document.documentElement.setAttribute("data-theme", theme);
     setTheme(newTheme);
