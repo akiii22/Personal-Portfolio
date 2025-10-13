@@ -1,56 +1,12 @@
+import { featuredProjects } from "../utils/projects";
 import { ExternalLink, Github } from "lucide-react";
-import {
-  SiReact,
-  SiSupabase,
-  SiTailwindcss,
-  SiStyledcomponents,
-} from "react-icons/si";
-
-const projects = [
-  {
-    title: "The Wild Oasis",
-    description: "A modern store with cart, checkout, and product pages.",
-    image: "/featured1.png",
-    tech: [
-      { name: "React", icon: <SiReact className="text-cyan-400 text-2xl" /> },
-      {
-        name: "Supabase",
-        icon: <SiSupabase className="text-green-500 text-2xl" />,
-      },
-      {
-        name: "Tailwind",
-        icon: <SiTailwindcss className="text-sky-400 text-2xl" />,
-      },
-    ],
-    live: "https://wild-oasis-101.vercel.app/",
-    github: "https://github.com/your-repo",
-  },
-  {
-    title: "Focus Flow",
-    description: "A personal task app where you can track your progress.",
-    image: "/featured2.png",
-    tech: [
-      {
-        name: "React",
-        icon: <SiReact className="text-cyan-400 text-2xl" />,
-      },
-      {
-        name: "Styled Components",
-        icon: <SiStyledcomponents className="text-pink-400 text-2xl" />,
-      },
-    ],
-    live: "https://focus-flow-ten-fawn.vercel.app/",
-    github: "https://github.com/your-repo",
-  },
-];
-
 const Projects = () => {
   return (
     <div className="max-w-5xl mx-auto space-y-10">
       <h2 className="text-3xl font-bold text-center">Featured Projects</h2>
 
       <div className="grid md:grid-cols-2 gap-6">
-        {projects.map((project, index) => (
+        {featuredProjects.map((project, index) => (
           <div
             key={index}
             className="border border-base-300 rounded-lg overflow-hidden"

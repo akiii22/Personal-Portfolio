@@ -45,7 +45,7 @@ const CallingCard = () => {
 
       <div className="mt-10">
         <a href="mailto:your@email.com" className="btn btn-primary btn-wide">
-          Say Hello 👋
+          Say Hello
         </a>
       </div>
 
@@ -58,7 +58,7 @@ const CallingCard = () => {
       </button>
 
       <footer className="text-center text-sm text-base-content/50 mt-16">
-        © 2025 Jerome Bulosan — Crafted with ❤️ using React & DaisyUI
+        © 2025 Jerome Bulosan
       </footer>
     </section>
   );

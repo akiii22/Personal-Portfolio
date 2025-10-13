@@ -7,6 +7,7 @@ import {
   SiReactquery,
   SiJsonwebtokens,
   SiDaisyui,
+  SiStyledcomponents,
 } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 
@@ -54,5 +55,43 @@ export const projects = [
       <SiJsonwebtokens key="jwt" className="text-orange-500 text-xl" />,
       <SiReactquery key="tanstack" className="text-pink-500 text-xl" />,
     ],
+  },
+];
+
+export const featuredProjects = [
+  {
+    title: "The Wild Oasis",
+    description: "A modern store with cart, checkout, and product pages.",
+    image: "/featured1.png",
+    tech: [
+      { name: "React", icon: <SiReact className="text-cyan-400 text-2xl" /> },
+      {
+        name: "Supabase",
+        icon: <SiSupabase className="text-green-500 text-2xl" />,
+      },
+      {
+        name: "Tailwind",
+        icon: <SiTailwindcss className="text-sky-400 text-2xl" />,
+      },
+    ],
+    live: "https://wild-oasis-101.vercel.app/",
+    github: "https://github.com/akiii22/the-wild-oasis",
+  },
+  {
+    title: "Focus Flow",
+    description: "A personal task app where you can track your progress.",
+    image: "/featured2.png",
+    tech: [
+      {
+        name: "React",
+        icon: <SiReact className="text-cyan-400 text-2xl" />,
+      },
+      {
+        name: "Styled Components",
+        icon: <SiStyledcomponents className="text-pink-400 text-2xl" />,
+      },
+    ],
+    live: "https://focus-flow-ten-fawn.vercel.app/",
+    github: "https://github.com/akiii22/Focus_flow",
   },
 ];

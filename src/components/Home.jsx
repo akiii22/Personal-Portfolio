@@ -34,8 +34,14 @@ const Home = () => {
         </p>
 
         <div className="flex flex-wrap justify-center lg:justify-start gap-3">
-          <button className="btn btn-outline btn-sm">View my Work</button>
-          <button className="btn btn-outline btn-sm">Contact me</button>
+          <button className="btn btn-outline btn-sm">
+            <a href="#timeline">View my work</a>
+          </button>
+          <button className="btn btn-outline btn-sm">
+            <a href="/Jerome Bulosan.pdf" download>
+              Download CV
+            </a>
+          </button>
           <label className="swap swap-rotate btn btn-ghost btn-sm">
             <input type="checkbox" onChange={handleTheme} />
             <Sun className="swap-on w-5 h-5 transition-transform duration-200" />
