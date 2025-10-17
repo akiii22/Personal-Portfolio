@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 useEffect;
 const themes = {
   fantasy: "fantasy",
-  coffee: "coffee",
+  business: "business",
 };
 
 const getLocalStorageTheme = () => {
@@ -14,8 +14,8 @@ const Home = () => {
   const [theme, setTheme] = useState(getLocalStorageTheme);
 
   const handleTheme = () => {
-    const { fantasy, coffee } = themes;
-    const newTheme = theme === fantasy ? coffee : fantasy;
+    const { fantasy, business } = themes;
+    const newTheme = theme === fantasy ? business : fantasy;
     document.documentElement.setAttribute("data-theme", theme);
     setTheme(newTheme);
   };
