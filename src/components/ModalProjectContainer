@@ -1,0 +1,9 @@
+const ModalContainer = () => {
+  return (
+    <div className="">
+      <span className="title">ModalContainer</span>
+    </div>
+  );
+};
+
+export default ModalContainer;
