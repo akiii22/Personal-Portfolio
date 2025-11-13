@@ -1,22 +1,21 @@
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
-useEffect;
+
 const themes = {
-  fantasy: "fantasy",
-  business: "business",
+  fantasy: "fantasy", // light theme
+  coffee: "coffee", // dark theme
 };
 
 const getLocalStorageTheme = () => {
-  return localStorage.getItem("theme");
+  return localStorage.getItem("theme") || themes.fantasy;
 };
 
 const Home = () => {
   const [theme, setTheme] = useState(getLocalStorageTheme);
 
   const handleTheme = () => {
-    const { fantasy, business } = themes;
-    const newTheme = theme === fantasy ? business : fantasy;
-    document.documentElement.setAttribute("data-theme", theme);
+    const { fantasy, coffee } = themes;
+    const newTheme = theme === fantasy ? coffee : fantasy;
     setTheme(newTheme);
   };
 
@@ -24,6 +23,7 @@ const Home = () => {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
+
   return (
     <div className="flex flex-col-reverse lg:flex-row items-center justify-evenly">
       <div className="max-w-xl space-y-6 text-center lg:text-left">
@@ -52,8 +52,9 @@ const Home = () => {
 
       <div className="flex-shrink-0 cursor-pointer">
         <div
-          className={`relative w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden border group
-    ${theme === "coffee" ? "border-base-content" : "border-base-300"}`}
+          className={`relative w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden border group ${
+            theme === "coffee" ? "border-base-content" : "border-base-300"
+          }`}
         >
           <img
             src="/profile.png"
@@ -70,4 +71,5 @@ const Home = () => {
     </div>
   );
 };
+
 export default Home;

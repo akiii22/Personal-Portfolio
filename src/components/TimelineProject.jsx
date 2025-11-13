@@ -13,7 +13,7 @@ const TimelineProject = () => {
           return (
             <div
               key={index}
-              className={`md:items-center md:flex mb-10 ${
+              className={`md:items-center md:flex mb-10 md:w-full ${
                 index % 2 !== 0 ? "md:flex-row-reverse" : ""
               }`}
             >

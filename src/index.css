@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: fantasy --default, business;
+  themes: fantasy --default, coffee;
 }
 
 @keyframes movingskills {
