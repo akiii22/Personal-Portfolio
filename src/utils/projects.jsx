@@ -10,6 +10,7 @@ import {
   SiStyledcomponents,
 } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
+import { BiLogoRedux } from "react-icons/bi";
 
 export const projects = [
   {
@@ -41,7 +42,7 @@ export const projects = [
     ],
   },
   {
-    title: "Mango Goy Yow",
+    title: "Mango Go Yow",
     year: "2025",
     description:
       "A full-stack freelance project for an online mango shake ordering system with both user and admin dashboards. Users can place and track orders, while admins manage inventory, orders, and customer records. Built with React for the frontend, Node.js with JWT authentication for the backend, TanStack for data management, and PostgreSQL as the database.",
@@ -54,6 +55,21 @@ export const projects = [
       <SiPostgresql key="postgresql" className="text-sky-700 text-xl" />,
       <SiJsonwebtokens key="jwt" className="text-orange-500 text-xl" />,
       <SiReactquery key="tanstack" className="text-pink-500 text-xl" />,
+    ],
+  },
+  {
+    title: "Comfy Store",
+    year: 2025,
+    description:
+      "A course project where you can order a furniture online, with login and logout functionalities, you can also register and sign up all the data is store in local storage, also it has a feature of night mode and light mode.",
+    img: "/project4.png",
+    github: "https://comfy-store-five-mocha.vercel.app/",
+    live: "https://github.com/akiii22/Comfy-store",
+    tech: [
+      <SiReact key="react" className="text-cyan-400 text-2xl" />,
+      <SiTailwindcss key="tailwind" className="text-sky-400 text-2xl" />,
+      <BiLogoRedux key="redux" className=" text-purple-500 text-2xl" />,
+      <SiReactquery key="tanstack" className=" text-red-500 text-2xl" />,
     ],
   },
 ];
