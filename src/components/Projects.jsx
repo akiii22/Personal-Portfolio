@@ -1,15 +1,42 @@
 import { featuredProjects } from "../utils/projects";
 import { ExternalLink, Github } from "lucide-react";
+import { motion } from "framer-motion";
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.15,
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  }),
+};
+
 const Projects = () => {
   return (
-    <div className="max-w-5xl mx-auto space-y-10">
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8 }}
+      className="max-w-5xl mx-auto space-y-10"
+    >
       <h2 className="text-3xl font-bold text-center">Featured Projects</h2>
 
       <div className="grid md:grid-cols-2 gap-6">
         {featuredProjects.map((project, index) => (
-          <div
+          <motion.div
             key={index}
-            className="border border-base-300 rounded-lg overflow-hidden"
+            custom={index}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.03 }}
+            className="border border-base-300 rounded-lg overflow-hidden shadow-sm"
           >
             <img
               src={project.image}
@@ -52,10 +79,11 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
+
 export default Projects;

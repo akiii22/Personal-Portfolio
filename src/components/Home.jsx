@@ -1,9 +1,10 @@
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const themes = {
-  fantasy: "fantasy", // light theme
-  coffee: "coffee", // dark theme
+  fantasy: "fantasy",
+  dim: "dim",
 };
 
 const getLocalStorageTheme = () => {
@@ -14,8 +15,8 @@ const Home = () => {
   const [theme, setTheme] = useState(getLocalStorageTheme);
 
   const handleTheme = () => {
-    const { fantasy, coffee } = themes;
-    const newTheme = theme === fantasy ? coffee : fantasy;
+    const { fantasy, dim } = themes;
+    const newTheme = theme === fantasy ? dim : fantasy;
     setTheme(newTheme);
   };
 
@@ -26,7 +27,12 @@ const Home = () => {
 
   return (
     <div className="flex flex-col-reverse lg:flex-row items-center justify-evenly">
-      <div className="max-w-xl space-y-6 text-center lg:text-left">
+      <motion.div
+        initial={{ opacity: 0, x: -40 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="max-w-xl space-y-6 text-center lg:text-left"
+      >
         <h1 className="font-bold text-4xl md:text-5xl">Jerome R. Bulosan</h1>
         <p className="text-lg">
           Aspiring Developer <span className="text-primary">|</span> Web
@@ -42,15 +48,22 @@ const Home = () => {
               Download CV
             </a>
           </button>
+
           <label className="swap swap-rotate btn btn-ghost btn-sm">
             <input type="checkbox" onChange={handleTheme} />
             <Sun className="swap-on w-5 h-5 transition-transform duration-200" />
             <Moon className="swap-off w-5 h-5 transition-transform duration-200" />
           </label>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="flex-shrink-0 cursor-pointer">
+      <motion.div
+        initial={{ opacity: 0, x: 40 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        whileHover={{ scale: 1.05 }}
+        className="flex-shrink-0 cursor-pointer"
+      >
         <div
           className={`relative w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden border group ${
             theme === "coffee" ? "border-base-content" : "border-base-300"
@@ -67,7 +80,7 @@ const Home = () => {
             className="absolute top-0 left-0 w-full h-full object-cover rounded-full opacity-0 transition-opacity duration-500 group-hover:opacity-100"
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
