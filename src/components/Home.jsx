@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const themes = {
   fantasy: "fantasy",
-  dim: "dim",
+  halloween: "halloween",
 };
 
 const getLocalStorageTheme = () => {
@@ -15,8 +15,8 @@ const Home = () => {
   const [theme, setTheme] = useState(getLocalStorageTheme);
 
   const handleTheme = () => {
-    const { fantasy, dim } = themes;
-    const newTheme = theme === fantasy ? dim : fantasy;
+    const { fantasy, halloween } = themes;
+    const newTheme = theme === fantasy ? halloween : fantasy;
     setTheme(newTheme);
   };
 

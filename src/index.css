@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: fantasy --default, dim;
+  themes: fantasy --default, halloween;
 }
 
 @keyframes movingskills {
