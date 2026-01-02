@@ -107,7 +107,7 @@ const CallingCard = () => {
         transition={{ duration: 1.2 }}
         viewport={{ once: true }}
       >
-        © 2025 Jerome Bulosan
+        © 2026 Jerome Bulosan
       </motion.footer>
     </section>
   );
